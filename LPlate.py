@@ -25,9 +25,10 @@ try:
         inky_display.set_image(img)
         inky_display.show()
 
-    def handle_button(pin):
-        print(f"button press detected on pin {pin}")
-        display_image(BUTTONS[pin])
+    def handle_button(btn):
+        pin_number = btn.pin.number
+        print(f"button press detected on pin {pin_number}")
+        display_image(BUTTONS[pin_number])
 
     for pin in BUTTONS.keys():
         button = Button(pin=pin, pull_up=True, bounce_time=0.1)
