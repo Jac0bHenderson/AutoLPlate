@@ -10,7 +10,7 @@ try:
     inky_display = auto()
 
     BUTTONS = [5, 6, 16]
-    LABELS = ["/home/raspberry/LearnerPlateEInk/L.jpg", "/home/raspberry/LearnerPlateEInk/RedP.jpg", "/home/raspberry/LearnerPlateEInk/GreenP.jpg"]
+    LABELS = ["/home/pi/AutoLPlate/L.jpg", "/home/pi/AutoLPlate/RedP.jpg", "/home/pi/AutoLPlate/GreenP.jpg"]
 
     def display_image(filepath):
         img = Image.open(filepath)
