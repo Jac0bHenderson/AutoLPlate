@@ -22,8 +22,12 @@ try:
     }
 
     def display_image(img):
-        inky_display.set_image(img)
-        inky_display.show()
+        try:
+            print("Displaying new image")
+            inky_display.set_image(img)
+            inky_display.show()
+        except Exception as ex:
+            print(ex)
 
     def handle_button(btn):
         pin_number = btn.pin.number
@@ -34,6 +38,8 @@ try:
         button = Button(pin=pin, pull_up=True, bounce_time=0.1)
         button.when_pressed = handle_button
         
+    print("Ready for button input")
+    
     signal.pause()              
 except Exception as ex:
     print(ex)     
